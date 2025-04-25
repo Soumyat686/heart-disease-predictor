@@ -1,0 +1,7 @@
+numpy
+pandas
+scikit-learn
+xgboost
+joblib
+matplotlib
+gradio>=3.50.0
