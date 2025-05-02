@@ -4,6 +4,7 @@ from app.config import get_settings
 
 # Load the model on module import
 settings = get_settings()
+
 model = joblib.load(settings.model_path)
 
 def predict_death_event(age, anaemia, high_blood_pressure, creatinine_phosphokinase, 

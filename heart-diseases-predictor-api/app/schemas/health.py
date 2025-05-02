@@ -1,7 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
-
-class Health(BaseModel):
-    name: str
-    api_version: str
-    model_version: str
+class HealthResponse(BaseModel):
+    """Response model for health check endpoint."""
+    status: str = Field(..., description="API status")

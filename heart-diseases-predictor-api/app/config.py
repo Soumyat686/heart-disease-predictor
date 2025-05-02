@@ -1,10 +1,11 @@
 from pydantic_settings import BaseSettings
 from functools import lru_cache
+import os
 
 class Settings(BaseSettings):
     """Application settings."""
     app_name: str = "Heart Failure Prediction API"
-    model_path: str = "xgboost-model.pkl"
+    model_path: str =  os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'xgboost-model.pkl')
     debug: bool = False
     
     class Config:
